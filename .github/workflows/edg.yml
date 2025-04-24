@@ -1,0 +1,31 @@
+name: Scheduled Task for tt.py
+on:
+  push:
+    branches: [main]
+  schedule:
+    # 每天四个时间点（UTC时间）：
+    # - 7:00（中国时间15:00）
+    # - 11:00（中国时间19:00）
+    # - 19:00（中国时间次日3:00）
+    # - 23:00（中国时间次日7:00）
+    - cron: '0 7,11,19,23 * * *'  # 关键修改点：添加了7和19点
+  workflow_dispatch:
+jobs:
+  run_script:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+      - name: Install dependencies
+        run: |  # 完全保留你原来的安装步骤
+          python -m pip install --upgrade pip
+          pip install requests pytz
+      - name: Run script
+        run: |
+          echo "UTC时间: $(date -u '+%Y-%m-%d %H:%M:%S')"
+          echo "开始执行tt.py..."
+          python tt.py
