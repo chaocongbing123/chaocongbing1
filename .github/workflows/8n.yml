@@ -1,0 +1,48 @@
+# 文件名: .github/workflows/2xs.yml
+name: Scheduled Task for tt.py (Triggered by n8n) # 可以稍微修改名字以反映触发方式
+
+on:
+  # 1. 保留 push 触发器：如果你希望代码推送到 main 分支后立即运行一次
+  push:
+    branches: [ main ] # 确保 'main' 是你的仓库默认分支名
+
+  # 2. 注释掉 GitHub 的 schedule：因为我们将用 n8n 的 Cron 来替代它，以保证准时性
+  # schedule:
+  #   - cron: '0 */2 * * *' # 由 n8n 接管定时任务
+
+  # 3. workflow_dispatch 触发器：允许 n8n 通过 API 调用来手动触发此工作流
+  workflow_dispatch:
+    inputs:
+      # (可选) 添加一个输入参数，这样 n8n 调用时可以传入信息，方便日志区分来源
+      trigger_source:
+        description: 'Workflow trigger source (e.g., n8n, manual)'
+        required: false
+        default: 'manual/unknown' # 如果 n8n 不传，或者手动运行时，显示这个默认值
+
+jobs:
+  run_script:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10' # 使用的 Python 版本
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests pytz  # 安装脚本依赖
+
+      - name: Run tt.py script
+        run: |
+          # (可选) 打印触发来源信息
+          echo "Workflow triggered by: ${{ github.event.inputs.trigger_source || github.event_name }}"
+          echo "当前UTC时间: $(date -u)"
+          echo "开始执行tt.py脚本..."
+          python tt.py  # 运行你的 Python 脚本
+          echo "脚本执行完成！"
+          # 注意：GitHub Action 本身只执行一次。无限循环的逻辑是由 n8n 的 Cron 定时重复触发这个 Action 实现的。
+          # 所以这里不需要说 "无限循环任务已激活"。
