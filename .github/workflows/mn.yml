@@ -13,11 +13,11 @@ jobs:
     steps:
       # 检出代码
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4  # 更新到 v4，确保使用最新版本
 
       # 设置 Python 环境
       - name: Set up Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5  # 更新到 v5，确保使用最新版本
         with:
           python-version: '3.9'  # 使用 Python 3.9，可以根据需要调整版本
 
@@ -44,7 +44,7 @@ jobs:
       # 可选：将运行结果作为 artifact 上传（方便查看日志）
       - name: Upload script output
         if: always()  # 即使失败也上传
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4  # 更新到 v4，确保使用最新版本
         with:
           name: script-output
           path: |
