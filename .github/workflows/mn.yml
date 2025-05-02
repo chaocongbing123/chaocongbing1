@@ -1,0 +1,50 @@
+name: Run PikPak Folder Creation Script via n8n
+
+# 仅通过手动触发（dispatch）运行，配合 n8n 的 webhook 调用
+on:
+  repository_dispatch:
+    types: [run-pikpak-script]
+
+jobs:
+  run-script:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 检出代码
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # 设置 Python 环境
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'  # 使用 Python 3.9，可以根据需要调整
+
+      # 安装依赖
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests pytz
+
+      # 检查 gu.txt 文件是否存在
+      - name: Check if gu.txt exists
+        run: |
+          if [ ! -f "gu.txt" ]; then
+            echo "gu.txt 文件未找到，请确保文件已上传到仓库"
+            exit 1
+          fi
+
+      # 运行 s.py 脚本
+      - name: Run s.py script
+        run: |
+          python s.py
+
+      # 可选：将运行结果作为 artifact 上传（方便查看日志）
+      - name: Upload script output
+        if: always()  # 即使失败也上传
+        uses: actions/upload-artifact@v3
+        with:
+          name: script-output
+          path: |
+            *.log
+            *.txt
