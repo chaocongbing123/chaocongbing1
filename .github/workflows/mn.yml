@@ -1,6 +1,6 @@
 name: Run PikPak Folder Creation Script via n8n
 
-# 仅通过手动触发（dispatch）运行，配合 n8n 的 webhook 调用
+# 仅通过 repository_dispatch 事件触发，允许 n8n 通过 API 调用运行
 on:
   repository_dispatch:
     types: [run-pikpak-script]
@@ -18,7 +18,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
-          python-version: '3.9'  # 使用 Python 3.9，可以根据需要调整
+          python-version: '3.9'  # 使用 Python 3.9，可以根据需要调整版本
 
       # 安装依赖
       - name: Install dependencies
