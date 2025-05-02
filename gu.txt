@@ -1,0 +1,20 @@
+# gu.txt 环境变量文件
+# 每次运行生成器会追加一组新的环境变量，适用于多个账号
+# 请在 email 字段填写你的账号信息，password 已固定为 zhiyuan233
+# 每次登录时使用此文件以确保环境一致
+
+
+
+
+
+
+# 新环境变量 (转换时间: 2025-05-02 14:23:59)
+email,fakerawde+rrSG4NlJLc@outlook.com
+password,zhiyuan233
+device_id,21cb989b10e941f59c9b573392dda01b
+version,1.42.6
+timestamp,1746166888000
+user_agent,
+device_model,
+device_name,
+
