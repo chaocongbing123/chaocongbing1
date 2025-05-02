@@ -26,6 +26,7 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install requests pytz
+          echo "已安装所有必要的依赖：requests 和 pytz"
 
       # 检查 gu.txt 文件是否存在
       - name: Check if gu.txt exists
