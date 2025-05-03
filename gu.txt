@@ -18,3 +18,83 @@ user_agent,
 device_model,
 device_name,
 
+
+
+# gug.txt 环境变量文件
+# 每次运行注册脚本会追加一组新的环境变量，适用于多个账号
+# email 和 password 字段已从注册信息中自动填充
+# 每次登录时使用此文件以确保环境一致
+
+# 新环境变量 (生成时间: 2025-05-03 23:38:16)
+email,shabiwqrq+ntZVSM@outlook.com
+password,q12345
+device_id,fd44f9ea11614889bd683435f6d6bd1b
+version,1.51.2
+timestamp,1746286618000
+user_agent,ANDROID-com.pikcloud.pikpak/1.51.2 accessmode/ devicename/Honor-7 pro 5G appname/ android-com.pikcloud.pikpak appid/ action_type/ clientid/ YNxT9w7GMdWvEOKa deviceid/fd44f9ea11614889bd683435f6d6bd1brefresh_token/ grant_type/ devicemodel/ XHL-HAYOA networktype/WIFI accesstype/ sessionid/ osversion/13.8.7 datetime/1746286618000 protocolversion/200 sdkversion/1.0.1.200200 clientversion/1.51.2 providername/NONE clientip/ session_origin/ devicesign/div101.fd44f9ea11614889bd683435f6d6bd1be20eb762ed01e3a8ac8dad080e23fe9aplatformversion/10 usrno/
+device_model,Honor-7 pro 5G
+device_name,XHL-HAYOA
+
+# 新环境变量 (生成时间: 2025-05-03 23:39:37)
+email,shabiwqrq+qvkutm@outlook.com
+password,q12345
+device_id,b8d7cf17e9df4eee9bb965c08f8ec916
+version,1.51.2
+timestamp,1746286716000
+user_agent,ANDROID-com.pikcloud.pikpak/1.51.2 accessmode/ devicename/APPLE-4A 6G appname/ android-com.pikcloud.pikpak appid/ action_type/ clientid/ YNxT9w7GMdWvEOKa deviceid/b8d7cf17e9df4eee9bb965c08f8ec916refresh_token/ grant_type/ devicemodel/ AUL-D4LNJ networktype/WIFI accesstype/ sessionid/ osversion/13.6.1 datetime/1746286716000 protocolversion/200 sdkversion/1.0.1.200200 clientversion/1.51.2 providername/NONE clientip/ session_origin/ devicesign/div101.b8d7cf17e9df4eee9bb965c08f8ec9168b15e4201b86515df6ad160df2736c3dplatformversion/10 usrno/
+device_model,APPLE-4A 6G
+device_name,AUL-D4LNJ
+
+# 新环境变量 (生成时间: 2025-05-03 23:38:16)
+email,shabiwqrq+ntZVSM@outlook.com
+password,q12345
+device_id,fd44f9ea11614889bd683435f6d6bd1b
+version,1.51.2
+timestamp,1746286618000
+user_agent,ANDROID-com.pikcloud.pikpak/1.51.2 accessmode/ devicename/Honor-7 pro 5G appname/ android-com.pikcloud.pikpak appid/ action_type/ clientid/ YNxT9w7GMdWvEOKa deviceid/fd44f9ea11614889bd683435f6d6bd1brefresh_token/ grant_type/ devicemodel/ XHL-HAYOA networktype/WIFI accesstype/ sessionid/ osversion/13.8.7 datetime/1746286618000 protocolversion/200 sdkversion/1.0.1.200200 clientversion/1.51.2 providername/NONE clientip/ session_origin/ devicesign/div101.fd44f9ea11614889bd683435f6d6bd1be20eb762ed01e3a8ac8dad080e23fe9aplatformversion/10 usrno/
+device_model,Honor-7 pro 5G
+device_name,XHL-HAYOA
+
+# 新环境变量 (生成时间: 2025-05-03 23:39:37)
+email,shabiwqrq+qvkutm@outlook.com
+password,q12345
+device_id,b8d7cf17e9df4eee9bb965c08f8ec916
+version,1.51.2
+timestamp,1746286716000
+user_agent,ANDROID-com.pikcloud.pikpak/1.51.2 accessmode/ devicename/APPLE-4A 6G appname/ android-com.pikcloud.pikpak appid/ action_type/ clientid/ YNxT9w7GMdWvEOKa deviceid/b8d7cf17e9df4eee9bb965c08f8ec916refresh_token/ grant_type/ devicemodel/ AUL-D4LNJ networktype/WIFI accesstype/ sessionid/ osversion/13.6.1 datetime/1746286716000 protocolversion/200 sdkversion/1.0.1.200200 clientversion/1.51.2 providername/NONE clientip/ session_origin/ devicesign/div101.b8d7cf17e9df4eee9bb965c08f8ec9168b15e4201b86515df6ad160df2736c3dplatformversion/10 usrno/
+device_model,APPLE-4A 6G
+device_name,AUL-D4LNJ
+
+
+
+
+# zhyuanhy.txt 环境变量文件
+# 每次运行生成器会追加一组新的环境变量，适用于多个账号
+# 请在 email 字段填写你的账号信息，password 已固定为 zhiyuan233
+# 每次登录时使用此文件以确保环境一致
+# 环境变量 (时间: 2025-05-04 02:11:32)
+email,shabiwqrq+QPRRV3vKnj@outlook.com 
+password,zhiyuan233
+device_id,d49fa8e99a7b4319a2497f4bb51cbc32
+version,1.51.2
+timestamp,1746295888000
+user_agent,
+device_model,
+device_name,
+
+
+
+# zhyuanhy.txt 环境变量文件
+# 每次运行生成器会追加一组新的环境变量，适用于多个账号
+# 请在 email 字段填写你的账号信息，password 已固定为 zhiyuan233
+# 每次登录时使用此文件以确保环境一致
+# 环境变量 (时间: 2025-05-04 03:26:56)
+email,shabiwqrq+9lH01R5toW@outlook.com
+password,zhiyuan233
+device_id,34c27354df964d2f8761c9e0264af8c8
+version,1.51.2
+timestamp,1746300401000
+user_agent,
+device_model,
+device_name,
+
